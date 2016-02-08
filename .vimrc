@@ -42,12 +42,23 @@ set encoding=utf8
 "let g:airline_powerline_fonts = 1
 
 if has("gui_running")
-  :color OceanicNext
-  "let g:airline_theme='luna'
-  ":AirlineTheme 'luna'
-  :set guifont=Consolas:h8
+  :color ample
+  :set guifont=Powerline\ Consolas:h9
+  let g:airline_theme='wombat'
+  let g:airline_powerline_fonts=1
+  " Hide toolbars:
+  :set guioptions-=m
+  :set guioptions-=T
+  :set guioptions-=L
+  :set guioptions-=r
   :set lines=999 columns=999
 endif
+
+" Better window navigation
+nnoremap <C-Down> <C-w>j
+nnoremap <C-Up> <C-w>k
+nnoremap <C-Left> <C-w>h
+nnoremap <C-Right> <C-w>l
 
 " Open NERD Tree
 autocmd vimenter * NERDTree
@@ -63,7 +74,7 @@ endif
 autocmd QuickFixCmdPost *grep* cwindow
 
 let g:gitgutter_avoid_cmd_prompt_on_windows = 0
-"let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 
 augroup reload_vimrc " {
     autocmd!
@@ -73,13 +84,19 @@ augroup END " }
 call plug#begin('~/.vim/plugged')
 
 " Vim plugins, should add more
-" TODO: add NERDTree, OcreanicNext, airline, and more
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'notpratheek/vim-luna'
 Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'bling/vim-bufferline'
+Plug 'Lokaltog/vim-distinguished'
+Plug 'rust-lang/rust.vim'
+Plug 'mkitt/tabline.vim'
 
 call plug#end()
 
