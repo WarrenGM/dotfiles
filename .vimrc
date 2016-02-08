@@ -60,6 +60,9 @@ nnoremap <C-Up> <C-w>k
 nnoremap <C-Left> <C-w>h
 nnoremap <C-Right> <C-w>l
 
+map <F5> :redraw!
+map <C-l> :CtrlPBuffer<CR>
+
 " Open NERD Tree
 autocmd vimenter * NERDTree
 

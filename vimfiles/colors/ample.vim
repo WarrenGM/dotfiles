@@ -11,12 +11,12 @@ let colors_name = "ample"
 
 " Vim >= 7.0 specific colors
 if version >= 700
-  hi CursorLine guibg=#262626
-  hi CursorColumn guibg=#292929
+  hi CursorLine guibg=#2d2d2d
+  hi CursorColumn guibg=#2d2d2d
   hi MatchParen guifg=#f6f3e8 guibg=#857b6f gui=bold
   hi Pmenu 		guifg=#f6f3e8 guibg=#303030 " Or guibg=#444444
   hi PmenuSel 	guifg=#000000 guibg=#cae682
-  hi ColorColumn              guibg=#262626
+  hi ColorColumn              guibg=#2d2d2d
 endif
 
 hi Cursor 		guifg=NONE    guibg=#656565 gui=none
@@ -25,15 +25,15 @@ hi NonText 		guifg=#808080 guibg=#303030 gui=none
 hi LineNr 		guifg=#656565 guibg=#212121 gui=none " *
 hi StatusLine 	guifg=#f6f3e8 guibg=#444444 gui=italic
 hi StatusLineNC guifg=#857b6f guibg=#444444 gui=none
-hi VertSplit 	guifg=#303030 guibg=#444444 gui=none
+hi VertSplit 	guifg=#444444 guibg=#444444 gui=none
 hi Folded 		guibg=#384048 guifg=#a0a8b0 gui=none
 hi Title		guifg=#f6f3e8 guibg=NONE	gui=bold
 hi Visual		guifg=#f6f3e8 guibg=#444444 gui=none
 hi SpecialKey	guifg=#808080 guibg=#343434 gui=none
 
-hi DiffAdd      guifg=#057F40 guibg=#212121 gui=bold
-hi DiffChange   guifg=#5180b3 guibg=#212121 gui=bold
-hi DiffDelete   guifg=#9D2512 guibg=#212121 gui=bold
+hi DiffAdd      guifg=#FFFFFF guibg=#057F40 gui=bold
+hi DiffChange   guifg=#FFFFFF guibg=#5180b3 gui=bold
+hi DiffDelete   guifg=#FFFFFF guibg=#9D2512 gui=bold
 
 " Syntax
 hi Comment 		guifg=#757575 gui=italic " DONE
