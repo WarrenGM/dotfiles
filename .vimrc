@@ -60,7 +60,19 @@ nnoremap <C-Up> <C-w>k
 nnoremap <C-Left> <C-w>h
 nnoremap <C-Right> <C-w>l
 
+" Interchange two lines
+nnoremap <C-j> :m+1<CR>
+nnoremap <C-k> :m-2<CR>
+
+" Duplicate a line, can't think of a better 
+nnoremap <C-p> :t.<CR>
+
+" Delete current line
+nnoremap <C-x> dd
+
 map <F5> :redraw!
+
+" List buffers
 map <C-l> :CtrlPBuffer<CR>
 
 " Open NERD Tree
@@ -100,6 +112,32 @@ Plug 'bling/vim-bufferline'
 Plug 'Lokaltog/vim-distinguished'
 Plug 'rust-lang/rust.vim'
 Plug 'mkitt/tabline.vim'
+Plug 'luochen1990/rainbow'
 
 call plug#end()
+
+    let g:rainbow_conf = {
+    \   'guifgs': ['#528fd1','#6aaf50','#cd5542','#ab75c3','#dF9522','#baba36','#057f40','#5180b3','#bdbc61','#9d2512'],
+    \   'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+    \   'operators': '_,_',
+    \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+    \   'separately': {
+    \       '*': {},
+    \       'tex': {
+    \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+    \       },
+    \       'lisp': {
+    \           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+    \       },
+    \       'vim': {
+    \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+    \       },
+    \       'html': {
+    \           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+    \       },
+    \       'css': 0,
+    \   }
+    \}
+
+let g:rainbow_active = 1
 

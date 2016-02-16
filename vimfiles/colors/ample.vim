@@ -31,9 +31,9 @@ hi Title		guifg=#f6f3e8 guibg=NONE	gui=bold
 hi Visual		guifg=#f6f3e8 guibg=#444444 gui=none
 hi SpecialKey	guifg=#808080 guibg=#343434 gui=none
 
-hi DiffAdd      guifg=#FFFFFF guibg=#057F40 gui=bold
-hi DiffChange   guifg=#FFFFFF guibg=#5180b3 gui=bold
-hi DiffDelete   guifg=#FFFFFF guibg=#9D2512 gui=bold
+hi DiffAdd      guifg=#FFFFFF guibg=#057F40 gui=none
+hi DiffChange   guifg=#FFFFFF guibg=#5180b3 gui=none
+hi DiffDelete   guifg=#FFFFFF guibg=#9D2512 gui=none
 
 " Syntax
 hi Comment 		guifg=#757575 gui=italic " DONE
